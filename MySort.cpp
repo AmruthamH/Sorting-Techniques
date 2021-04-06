@@ -23,7 +23,7 @@ long long gb  = 1024*1024*1024;
 
 long long memory_size  = 8*gb;
 
-#define length_of_line 200
+#define length_of_line 100
 
 #define SORT_THREADS 48
 
@@ -225,7 +225,7 @@ class Merge_File
         ifstream infile[inputfilenames.size()];
         ofstream ofile;
         long num_in_files =inputfilenames.size();
-        int line_length = 200;
+        int line_length = 100;
         //Input files
         for (size_t i = 0; i < num_in_files; i++)
         {
