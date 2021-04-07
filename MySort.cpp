@@ -11,7 +11,6 @@
 #include <numeric>
 #include <cstdio>
 #include <vector>
-#include "mergesort.hpp"
 #include "minheap.h"
 
 using namespace std;
@@ -187,8 +186,7 @@ class Details
 void sort_file(char** sort_data,long long num_lines,vector<double>&sort_time,int sort_index)
 {
     chrono::high_resolution_clock::time_point sort_t1 = chrono::high_resolution_clock::now();
-    //QuickSort(sort_data, 0, num_lines - 1);
-    MergeSort(sort_data, 0, num_lines - 1);
+    QuickSort(sort_data, 0, num_lines - 1);
     chrono::high_resolution_clock::time_point sort_t2 = chrono::high_resolution_clock::now();
     chrono::duration<double> sort_span = chrono::duration_cast<chrono::duration<double>>(sort_t2 - sort_t1);
     sort_time[sort_index] = sort_span.count();

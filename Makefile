@@ -1,3 +1,3 @@
   
 all:
-	g++ -std=c++11 -g -pthread mergesort.cpp main.cpp minheap.cpp -o ms.out
+	g++ -std=c++11 -g -pthread quicksort.cpp MySort.cpp minheap.cpp -o ms.out
